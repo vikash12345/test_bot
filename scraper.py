@@ -34,5 +34,7 @@ html = scraperwiki.scrape("https://morph.io/documentation")
 #root.cssselect("div[align='left']")
 # scraperwiki.sqlite.save(unique_keys=['html'], data={"source": "This is testing"})
 
-scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
+scraperwiki.sqlite.save(unique_keys=['html_source'], data={"name": "susan", "html_source": str(html)})
 print scraperwiki.sqlite.show_tables()
+
+
