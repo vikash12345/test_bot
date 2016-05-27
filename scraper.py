@@ -22,3 +22,14 @@
 # All that matters is that your final data is written to an SQLite database
 # called "data.sqlite" in the current working directory which has at least a table
 # called "data".
+
+import scraperwiki
+import lxml.html
+#
+# # Read in a page
+html = scraperwiki.scrape("https://morph.io/documentation")
+#
+# # Find something on the page using css selectors
+#root = lxml.html.fromstring(html)
+#root.cssselect("div[align='left']")
+print html
