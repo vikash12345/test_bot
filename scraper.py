@@ -32,6 +32,6 @@ html = scraperwiki.scrape("https://morph.io/documentation")
 # # Find something on the page using css selectors
 #root = lxml.html.fromstring(html)
 #root.cssselect("div[align='left']")
-# scraperwiki.sqlite.save(unique_keys=['html'], data={"source": str(html)})
+scraperwiki.sqlite.save(unique_keys=['html'], data={"source": "This is testing"})
 
 print scraperwiki.sqlite.show_tables()
